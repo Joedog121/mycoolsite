@@ -93,23 +93,400 @@
     .badge:hover { border-color: var(--gold-light); color: var(--gold-light); }
 
     /* SERVICES */
-    .services-section { background: var(--off-white); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .service-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-lg); padding: 32px; transition: all var(--transition); opacity: 0; transform: translateY(24px); box-shadow: var(--shadow-sm); }
-    .service-card.visible { opacity: 1; transform: translateY(0); }
-    .service-card:hover { border-color: var(--blue-light); box-shadow: var(--shadow); transform: translateY(-4px); }
-    .service-card--featured { grid-column: span 2; background: linear-gradient(135deg, var(--dark) 0%, #0D1B3E 100%); border-color: transparent; }
-    .service-card--featured h3 { color: var(--white); }
-    .service-card--featured p { color: rgba(255,255,255,0.65); }
-    .service-card--featured .service-list li { color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.06); border-left-color: var(--gold); }
-    .service-card--highlight { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); border-color: transparent; box-shadow: 0 8px 32px rgba(200,155,42,0.3); }
-    .service-card--highlight h3 { color: var(--white); }
-    .service-card--highlight p { color: rgba(255,255,255,0.85); }
-    .service-card-icon { font-size: 2rem; margin-bottom: 16px; }
-    .service-card h3 { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.04em; color: var(--dark); margin-bottom: 12px; }
-    .service-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.65; }
-    .service-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; }
-    .service-list li { font-size: 0.82rem; color: var(--text); padding: 6px 12px; background: var(--light-gray); border-radius: var(--radius); border-left: 3px solid var(--blue); }
+   <!-- REPLACE YOUR ENTIRE SERVICES SECTION WITH THIS -->
+
+<section id="services" class="section services-section">
+  <div class="container">
+    <p class="section-label">What We Do Best</p>
+    <h2 class="section-title">Professional Electrical Services</h2>
+
+    <div class="services-grid">
+
+      <!-- MAIN ELECTRICIAN -->
+      <article class="service-card service-card--featured">
+        <div class="service-image">
+          <img src="images/service-electrician.jpg" alt="Seattle Electrician" loading="lazy">
+        </div>
+
+        <div class="service-content">
+          <div class="service-card-icon">⚡</div>
+
+          <h3>Residential & Commercial Electrical</h3>
+
+          <p>
+            Full-service electrical work for homes, remodels,
+            businesses, and new construction projects throughout
+            Seattle and surrounding areas.
+          </p>
+
+          <ul class="service-list">
+            <li>Electrical Panel Upgrades</li>
+            <li>Full Home Rewiring</li>
+            <li>Lighting Installation</li>
+            <li>Electrical Troubleshooting</li>
+            <li>Dedicated Circuits</li>
+            <li>Outlet & Switch Installations</li>
+            <li>Smart Home Wiring</li>
+            <li>Code Corrections</li>
+          </ul>
+
+          <div class="service-bottom">
+            <span class="service-badge">Licensed & Insured</span>
+
+            <a href="#contact" class="btn btn-primary">
+              Get Quote
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PANEL UPGRADES -->
+      <article class="service-card">
+        <div class="service-image">
+          <img src="images/service-panel.jpg" alt="Electrical Panel Upgrade" loading="lazy">
+        </div>
+
+        <div class="service-content">
+          <div class="service-card-icon">🔌</div>
+
+          <h3>Panel Upgrades</h3>
+
+          <p>
+            Upgrade outdated electrical panels for modern appliances,
+            EV chargers, generators, and safer power distribution.
+          </p>
+
+          <ul class="service-list">
+            <li>100A → 200A Upgrades</li>
+            <li>Breaker Replacement</li>
+            <li>Permit Handling</li>
+            <li>Safety Inspections</li>
+          </ul>
+
+          <div class="service-bottom">
+            <span class="service-badge">Fast Turnaround</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- EV CHARGERS -->
+      <article class="service-card">
+        <div class="service-image">
+          <img src="images/service-ev.jpg" alt="EV Charger Installation" loading="lazy">
+        </div>
+
+        <div class="service-content">
+          <div class="service-card-icon">🚗</div>
+
+          <h3>EV Charger Installation</h3>
+
+          <p>
+            Professional Level 1 and Level 2 EV charger installations
+            for Tesla and all major electric vehicles.
+          </p>
+
+          <ul class="service-list">
+            <li>Level 2 Chargers</li>
+            <li>Tesla Wall Connectors</li>
+            <li>Garage Installations</li>
+            <li>Commercial Charging</li>
+          </ul>
+
+          <div class="service-bottom">
+            <span class="service-badge">EV Certified</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- GENERATORS -->
+      <article class="service-card service-card--highlight">
+        <div class="service-image">
+          <img src="images/service-generator.jpg" alt="Generator Installation" loading="lazy">
+        </div>
+
+        <div class="service-content">
+          <div class="service-card-icon">🔋</div>
+
+          <h3>Backup Generator Systems</h3>
+
+          <p>
+            Protect your home during outages with standby generator
+            installation, maintenance, and repairs.
+          </p>
+
+          <ul class="service-list">
+            <li>Whole Home Generators</li>
+            <li>Transfer Switches</li>
+            <li>Generator Repairs</li>
+            <li>Annual Maintenance</li>
+          </ul>
+
+          <div class="service-bottom">
+            <span class="service-badge">Emergency Ready</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- FEATURES -->
+    <div class="services-features">
+
+      <div class="feature-box">
+        <div class="feature-icon">🛡️</div>
+
+        <h4>Licensed & Insured</h4>
+
+        <p>
+          Professional electrical work done safely and up to code.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon">⚙️</div>
+
+        <h4>Modern Solutions</h4>
+
+        <p>
+          Smart home upgrades, EV charging,
+          and energy-efficient installs.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon">🏠</div>
+
+        <h4>Family-Owned</h4>
+
+        <p>
+          Local electricians serving Seattle with pride since 2020.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon">⭐</div>
+
+        <h4>Quality Work</h4>
+
+        <p>
+          Attention to detail and dependable service on every project.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REPLACE YOUR ENTIRE WORK SECTION WITH THIS -->
+
+<section id="work" class="section work-section">
+  <div class="container">
+
+    <p class="section-label">Recent Projects</p>
+
+    <h2 class="section-title">See Our Work</h2>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item gallery-item--tall">
+        <img src="images/work1.jpg" alt="Electrical Project 1" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/work2.jpg" alt="Electrical Project 2" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/work3.jpg" alt="Electrical Project 3" loading="lazy">
+      </div>
+
+      <div class="gallery-item gallery-item--wide">
+        <img src="images/work4.jpg" alt="Electrical Project 4" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/work5.jpg" alt="Electrical Project 5" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/work6.jpg" alt="Electrical Project 6" loading="lazy">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ADD THIS CSS UNDER YOUR CURRENT SERVICES/GALLERY CSS -->
+
+<style>
+
+/* NEW SERVICE CARD DESIGN */
+
+.service-card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.service-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.08);
+}
+
+.service-content {
+  padding: 28px;
+}
+
+.service-bottom {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.service-badge {
+  background: rgba(42,108,181,0.08);
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 100px;
+}
+
+.service-card--highlight .service-badge {
+  background: rgba(255,255,255,0.18);
+  color: white;
+}
+
+.service-card--featured .service-badge {
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+/* FEATURES */
+
+.services-features {
+  margin-top: 60px;
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+
+  gap: 20px;
+}
+
+.feature-box {
+  background: var(--white);
+
+  border: 1px solid var(--light-gray);
+
+  border-radius: var(--radius-lg);
+
+  padding: 28px;
+
+  text-align: center;
+
+  transition: all var(--transition);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.feature-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.feature-box h4 {
+  font-family: var(--font-display);
+
+  font-size: 1.2rem;
+
+  margin-bottom: 10px;
+
+  letter-spacing: 0.04em;
+
+  color: var(--dark);
+}
+
+.feature-box p {
+  font-size: 0.9rem;
+
+  color: var(--text-muted);
+
+  line-height: 1.6;
+}
+
+/* BETTER GALLERY */
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item::after {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.45),
+    transparent
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+.gallery-item img {
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .service-image {
+    height: 200px;
+  }
+
+  .service-content {
+    padding: 22px;
+  }
+
+}
+
+</style>
 
     /* ABOUT */
     .about-section { background: var(--white); }
