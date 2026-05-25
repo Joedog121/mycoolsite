@@ -31,6 +31,7 @@
       --shadow-lg: 0 16px 60px rgba(0,0,0,0.16);
       --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { background: var(--white); color: var(--text); font-family: var(--font-body); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
@@ -94,22 +95,249 @@
 
     /* SERVICES */
     .services-section { background: var(--off-white); }
+    .services-head {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: start;
+      margin-bottom: 40px;
+    }
+    .services-intro p {
+      color: var(--text-muted);
+      max-width: 720px;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+    .services-note {
+      background: linear-gradient(135deg, rgba(42,108,181,0.08) 0%, rgba(200,155,42,0.10) 100%);
+      border: 1px solid rgba(42,108,181,0.12);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .services-note h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      letter-spacing: 0.04em;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .services-note p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+    .services-note ul {
+      display: grid;
+      gap: 8px;
+    }
+    .services-note li {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      padding-left: 18px;
+      position: relative;
+    }
+    .services-note li::before {
+      content: '•';
+      color: var(--gold);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1rem;
+    }
+
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .service-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: var(--radius-lg); padding: 32px; transition: all var(--transition); opacity: 0; transform: translateY(24px); box-shadow: var(--shadow-sm); }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      transition: all var(--transition);
+      opacity: 0;
+      transform: translateY(24px);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--blue), var(--gold));
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
     .service-card.visible { opacity: 1; transform: translateY(0); }
-    .service-card:hover { border-color: var(--blue-light); box-shadow: var(--shadow); transform: translateY(-4px); }
-    .service-card--featured { grid-column: span 2; background: linear-gradient(135deg, var(--dark) 0%, #0D1B3E 100%); border-color: transparent; }
-    .service-card--featured h3 { color: var(--white); }
-    .service-card--featured p { color: rgba(255,255,255,0.65); }
-    .service-card--featured .service-list li { color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.06); border-left-color: var(--gold); }
-    .service-card--highlight { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); border-color: transparent; box-shadow: 0 8px 32px rgba(200,155,42,0.3); }
-    .service-card--highlight h3 { color: var(--white); }
-    .service-card--highlight p { color: rgba(255,255,255,0.85); }
-    .service-card-icon { font-size: 2rem; margin-bottom: 16px; }
-    .service-card h3 { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.04em; color: var(--dark); margin-bottom: 12px; }
-    .service-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.65; }
-    .service-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; }
-    .service-list li { font-size: 0.82rem; color: var(--text); padding: 6px 12px; background: var(--light-gray); border-radius: var(--radius); border-left: 3px solid var(--blue); }
+    .service-card:hover {
+      border-color: var(--blue-light);
+      box-shadow: var(--shadow);
+      transform: translateY(-4px);
+    }
+    .service-card:hover::before { opacity: 1; }
+
+    .service-card--featured {
+      grid-column: span 2;
+      background: linear-gradient(135deg, var(--dark) 0%, #0D1B3E 100%);
+      border-color: transparent;
+    }
+    .service-card--featured h3,
+    .service-card--featured .service-bestfor-title,
+    .service-card--featured .service-includes-title { color: var(--white); }
+    .service-card--featured p,
+    .service-card--featured .service-bestfor-text { color: rgba(255,255,255,0.72); }
+    .service-card--featured .service-list li {
+      color: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.06);
+      border-left-color: var(--gold);
+    }
+    .service-card--featured .service-meta span {
+      background: rgba(255,255,255,0.09);
+      color: rgba(255,255,255,0.88);
+      border-color: rgba(255,255,255,0.12);
+    }
+
+    .service-card--highlight {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      border-color: transparent;
+      box-shadow: 0 8px 32px rgba(200,155,42,0.3);
+    }
+    .service-card--highlight h3,
+    .service-card--highlight .service-bestfor-title,
+    .service-card--highlight .service-includes-title { color: var(--white); }
+    .service-card--highlight p,
+    .service-card--highlight .service-bestfor-text { color: rgba(255,255,255,0.9); }
+    .service-card--highlight .service-list li {
+      background: rgba(255,255,255,0.16);
+      color: var(--white);
+      border-left-color: var(--white);
+    }
+    .service-card--highlight .service-meta span {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.18);
+      color: var(--white);
+    }
+
+    .service-card-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, rgba(42,108,181,0.12), rgba(200,155,42,0.14));
+      box-shadow: inset 0 0 0 1px rgba(42,108,181,0.08);
+    }
+    .service-card--featured .service-card-icon,
+    .service-card--highlight .service-card-icon {
+      background: rgba(255,255,255,0.12);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+    }
+
+    .service-card h3 { font-family: var(--font-display); font-size: 1.6rem; letter-spacing: 0.04em; color: var(--dark); margin-bottom: 10px; }
+    .service-card p { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 18px; line-height: 1.7; }
+
+    .service-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .service-meta span {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: rgba(42,108,181,0.07);
+      border: 1px solid rgba(42,108,181,0.12);
+      border-radius: 100px;
+      padding: 7px 12px;
+    }
+
+    .service-bestfor {
+      margin-bottom: 18px;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      background: var(--off-white);
+      border: 1px solid var(--light-gray);
+    }
+    .service-card--featured .service-bestfor {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.10);
+    }
+    .service-card--highlight .service-bestfor {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.16);
+    }
+
+    .service-bestfor-title,
+    .service-includes-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .service-bestfor-text {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 8px;
+    }
+    .service-list li {
+      font-size: 0.82rem;
+      color: var(--text);
+      padding: 8px 12px;
+      background: var(--light-gray);
+      border-radius: var(--radius);
+      border-left: 3px solid var(--blue);
+    }
+
+    .services-benefits {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .services-benefit {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: var(--radius-lg);
+      padding: 18px 18px;
+      box-shadow: var(--shadow-sm);
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .services-benefit.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .services-benefit strong {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .services-benefit span {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
 
     /* ABOUT */
     .about-section { background: var(--white); }
@@ -196,10 +424,12 @@
     /* RESPONSIVE */
     @media (max-width: 1024px) {
       .service-card--featured { grid-column: span 1; }
-      .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+      .about-inner, .contact-inner, .services-head { grid-template-columns: 1fr; gap: 48px; }
       .about-image-wrap { display: none; }
       .footer-inner { grid-template-columns: 1fr 1fr; }
+      .services-benefits { grid-template-columns: 1fr 1fr; }
     }
+
     @media (max-width: 768px) {
       .section { padding: 64px 0; }
       .nav-toggle { display: flex; }
@@ -214,7 +444,9 @@
       .about-stats { flex-direction: column; gap: 20px; }
       .hero-title { font-size: clamp(3.5rem, 16vw, 6rem); }
       .hero-logo { width: 110px; height: 110px; }
+      .services-benefits { grid-template-columns: 1fr; }
     }
+
     @media (max-width: 480px) {
       .hero { padding: 100px 20px 64px; }
       .gallery-grid { grid-template-columns: 1fr; }
@@ -225,7 +457,6 @@
   </style>
 </head>
 <body>
-
   <header class="site-header">
     <div class="header-inner">
       <a href="#" class="logo">
@@ -272,13 +503,44 @@
 
   <section id="services" class="section services-section">
     <div class="container">
-      <p class="section-label">What We Do Best</p>
-      <h2 class="section-title">Our Services</h2>
+      <div class="services-head">
+        <div class="services-intro">
+          <p class="section-label">What We Do Best</p>
+          <h2 class="section-title">Our Services</h2>
+          <p>
+            Whether you need a simple repair, a major panel upgrade, or a complete electrical solution for a remodel or new build, Erickson Electric delivers clean workmanship, clear communication, and dependable results. We work with homeowners, builders, and small businesses throughout Seattle and surrounding communities to keep properties safe, efficient, and ready for modern power demands.
+          </p>
+        </div>
+
+        <aside class="services-note">
+          <h3>What You Can Expect</h3>
+          <p>We don’t just install electrical systems — we help you make smart decisions for safety, capacity, and long-term reliability.</p>
+          <ul>
+            <li>Thorough troubleshooting and honest recommendations</li>
+            <li>Code-conscious installations and upgrades</li>
+            <li>Clean, organized work areas and respectful service</li>
+            <li>Solutions designed for today’s appliances, technology, and energy use</li>
+          </ul>
+        </aside>
+      </div>
+
       <div class="services-grid">
         <article class="service-card service-card--featured">
           <div class="service-card-icon">⚡</div>
-          <h3>Electrician</h3>
-          <p>Residential and commercial electrical services across Seattle — from outlets and lighting to full rewires and new construction wiring.</p>
+          <h3>Residential &amp; General Electrical</h3>
+          <p>
+            From small fixes to major electrical improvements, we provide full-service residential electrical work tailored to the needs of older Seattle homes, updated remodels, and modern living spaces. If your lights flicker, circuits trip, outlets feel outdated, or you’re planning an improvement project, we can help you upgrade safely and confidently.
+          </p>
+          <div class="service-meta">
+            <span>Repairs</span>
+            <span>Remodels</span>
+            <span>New Installation</span>
+          </div>
+          <div class="service-bestfor">
+            <div class="service-bestfor-title">Best For</div>
+            <div class="service-bestfor-text">Homeowners needing reliable electrical work for everyday safety, function, and long-term performance.</div>
+          </div>
+          <div class="service-includes-title">What’s Included</div>
           <ul class="service-list">
             <li>Electrical Panel Upgrades</li>
             <li>Electrical Service Upgrades</li>
@@ -286,34 +548,101 @@
             <li>Electrical Remodeling</li>
             <li>Electrical Rewiring</li>
             <li>Smart Switch &amp; Outlet Install</li>
+            <li>Lighting &amp; Fixture Installation</li>
+            <li>Dedicated Circuit Installation</li>
           </ul>
         </article>
+
         <article class="service-card">
           <div class="service-card-icon">🚗</div>
           <h3>EV Charging Stations</h3>
-          <p>Professional EV charging installation and repair. Level 1 &amp; Level 2 chargers for homes and businesses across King County and beyond.</p>
+          <p>
+            Make home charging faster, safer, and more convenient with professional EV charger installation. We install Level 1 and Level 2 charging setups and evaluate your panel capacity, wiring path, and ideal charger location so your system performs the way it should.
+          </p>
+          <div class="service-meta">
+            <span>Home Charging</span>
+            <span>Level 1 &amp; 2</span>
+          </div>
+          <div class="service-bestfor">
+            <div class="service-bestfor-title">Best For</div>
+            <div class="service-bestfor-text">Homeowners who want dependable overnight charging and a setup that matches their vehicle and electrical system.</div>
+          </div>
+          <div class="service-includes-title">What’s Included</div>
           <ul class="service-list">
             <li>EV Station Installation</li>
             <li>EV Charger Repair</li>
             <li>Level 2 Charger Install</li>
+            <li>Dedicated Circuit Setup</li>
+            <li>Load Evaluation</li>
           </ul>
         </article>
+
         <article class="service-card">
           <div class="service-card-icon">🔋</div>
           <h3>Generator Services</h3>
-          <p>Keep the lights on no matter what. We install, maintain, and repair standby and whole-home generators throughout the Seattle metro.</p>
+          <p>
+            Keep essential systems running during outages with standby and whole-home generator solutions. We help you plan the right setup for your home’s size, usage, and backup priorities so you can stay powered when the grid goes down.
+          </p>
+          <div class="service-meta">
+            <span>Backup Power</span>
+            <span>Standby Systems</span>
+          </div>
+          <div class="service-bestfor">
+            <div class="service-bestfor-title">Best For</div>
+            <div class="service-bestfor-text">Families who want peace of mind during storms, outages, and unexpected utility interruptions.</div>
+          </div>
+          <div class="service-includes-title">What’s Included</div>
           <ul class="service-list">
             <li>Whole Home Generator Install</li>
             <li>Standby Generator Install</li>
             <li>Generator Maintenance</li>
             <li>Generator Repair</li>
+            <li>Transfer Switch Solutions</li>
           </ul>
         </article>
+
         <article class="service-card service-card--highlight">
           <div class="service-card-icon">🔌</div>
           <h3>Panel Upgrades</h3>
-          <p>Upgrade your electrical panel for modern safety and capacity. Free inspection, full permit handling, and professional installation.</p>
+          <p>
+            Older panels often weren’t built for today’s appliances, HVAC systems, EV chargers, and technology. We upgrade outdated or undersized electrical panels to improve safety, increase available capacity, and prepare your home for future expansion.
+          </p>
+          <div class="service-meta">
+            <span>Safety First</span>
+            <span>Higher Capacity</span>
+          </div>
+          <div class="service-bestfor">
+            <div class="service-bestfor-title">Best For</div>
+            <div class="service-bestfor-text">Homes with frequent breaker trips, remodel plans, outdated equipment, or growing power demands.</div>
+          </div>
+          <div class="service-includes-title">What’s Included</div>
+          <ul class="service-list">
+            <li>Panel Inspection</li>
+            <li>Panel Replacement</li>
+            <li>Breaker Upgrades</li>
+            <li>Capacity Review</li>
+            <li>Modern Safety Improvements</li>
+          </ul>
         </article>
+      </div>
+
+      <div class="services-benefits">
+        <div class="services-benefit">
+          <strong>Clear Recommendations</strong>
+          <span>We explain the problem, the options, and the best path forward without unnecessary upselling.</span>
+        </div>
+        <div class="services-benefit">
+          <strong>Built for Modern Power Needs</strong>
+          <span>From EV chargers to remodels, we install with today’s electrical demands in mind.</span>
+        </div>
+        <div class="services-benefit">
+          <strong>Safety-Focused Work</strong>
+          <span>Every project is approached with careful attention to reliability, performance, and code-conscious workmanship.</span>
+        </div>
+        <div class="services-benefit">
+          <strong>Local, Family-Owned Service</strong>
+          <span>You get direct communication, dependable scheduling, and service from a team that values its reputation.</span>
+        </div>
       </div>
     </div>
   </section>
@@ -451,7 +780,7 @@
   </section>
 
   <div class="map-wrap">
-    <iframe title="Erickson Electric Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42760.92049498966!2d-122.23931455!3d47.94494194999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xad40f9c3919f48dd%3A0xa459b8abc024e0c5!2sErickson%20Electric%20LLC!5e0!3m2!1sen!2sco!4v1772203912480!5m2!1sen!2sco" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe title="Erickson Electric Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42760.92049498966!2d-122.23931455!3d47.94494194999999!2m3!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xad40f9c3919f48dd%3A0xa459b8abc024e0c5!2sErickson%20Electric%20LLC!5e0!3m2!1sen!2sco!4v1772203912480!5m2!1sen!2sco" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
 
   <footer class="site-footer">
@@ -496,26 +825,44 @@
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const target = document.querySelector(a.getAttribute('href'));
-        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); document.body.classList.remove('nav-open'); }
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+          document.body.classList.remove('nav-open');
+        }
       });
     });
+
     window.addEventListener('scroll', () => {
       document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 40);
     });
+
     document.querySelectorAll('.faq-item').forEach(item => {
       item.addEventListener('toggle', () => {
-        if (item.open) { document.querySelectorAll('.faq-item[open]').forEach(o => { if (o !== item) o.removeAttribute('open'); }); }
+        if (item.open) {
+          document.querySelectorAll('.faq-item[open]').forEach(o => {
+            if (o !== item) o.removeAttribute('open');
+          });
+        }
       });
     });
+
     function handleSubmit(e) {
       e.preventDefault();
       document.getElementById('formSuccess').style.display = 'block';
       e.target.reset();
     }
+
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.service-card, .faq-item, .gallery-item, .stat, .areas-grid span').forEach(el => observer.observe(el));
+
+    document.querySelectorAll('.service-card, .faq-item, .gallery-item, .stat, .areas-grid span, .services-benefit').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
