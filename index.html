@@ -1,343 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Erickson Electric is a family-owned electrical contractor serving Seattle, WA and surrounding areas. We provide residential electrical repairs, panel upgrades, rewiring, EV charger installation, generators, lighting, and more."
-  />
-  <title>Home | Erickson Electric</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Erickson Electric provides residential electrical services in Seattle: panel upgrades, EV charging, generators, rewiring, and safety inspections. Family-owned since 2020. Call today." />
+<title>Electrical Services | Erickson Electric | Seattle WA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="top-bar">
-    <div class="container top-bar-inner">
-      <p>Family-Owned Electrical Contractor Serving Seattle and Surrounding Areas</p>
-      <a href="tel:+12065550199">(206) 555-0199</a>
+<header class="site-header">
+<div class="header-inner">
+  <a href="#" class="logo">
+    <img src="logo.png" alt="Erickson Electric Logo" />
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="document.body.classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="main-nav">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#work">Our Work</a>
+    <a href="#faq">FAQ</a>
+    <a href="#areas">Service Areas</a>
+    <a href="#contact" class="nav-cta">Free Quote</a>
+  </nav>
+  <a href="tel:+12065550199" class="header-phone">(206) 555-0199</a>
+</div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg-lines" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-glow-2" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-logo">
+      <img src="logo.png" alt="Erickson Electric" />
     </div>
-  </header>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="logo">
-        <img src="logo.png" alt="Erickson Electric Logo" />
-      </a>
-
-      <button
-        class="nav-toggle"
-        aria-label="Toggle menu"
-        onclick="document.body.classList.toggle('nav-open')"
-      >
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="main-nav">
-        <a href="#">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#work">Our Work</a>
-        <a href="#faq">FAQ</a>
-        <a href="#areas">Service Areas</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <p class="hero-eyebrow">Your local electrical specialists</p>
+    <h1 class="hero-title">Power Done<br><span class="accent">Right.</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">
+      Full-service electrical solutions for Seattle homes &amp; businesses. Panel upgrades, EV charging, generators, rewiring, new construction, and more — backed by family expertise and quality workmanship.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+      <a href="tel:+12065550199" class="btn btn-outline">(206) 555-0199</a>
     </div>
-  </header>
-
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>Reliable Electrical Service for Your Home and Family</h1>
-        <p>
-          Erickson Electric is a local, family-owned company providing dependable residential
-          electrical work in Seattle and nearby communities. From repairs and panel upgrades
-          to EV chargers, generators, and remodel wiring, we’re here to help.
-        </p>
-
-        <div class="hero-actions">
-          <a href="tel:+12065550199" class="btn btn-primary">Call Now</a>
-          <a href="#contact" class="btn btn-secondary">Request a Free Quote</a>
-        </div>
-
-        <ul class="hero-list">
-          <li>Licensed &amp; Insured</li>
-          <li>Family-Owned</li>
-          <li>Residential Electrical Service</li>
-          <li>Serving Seattle and Nearby Areas</li>
-        </ul>
-      </div>
-
-      <div class="hero-image">
-        <img src="work-1.jpg" alt="Erickson Electric at work" />
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="container two-col">
-      <div>
-        <h2>About Erickson Electric</h2>
-        <p>
-          Erickson Electric was started in 2020 by two brothers and their father, a master
-          electrician who taught them the trade. We built our business around the same values
-          we were taught from the beginning: do the job right, be honest with people, and
-          treat every home with respect.
-        </p>
-        <p>
-          We know that electrical work is about more than wires and panels. It’s about keeping
-          your home safe, your family comfortable, and your day-to-day life running smoothly.
-        </p>
-      </div>
-
-      <div class="side-box">
-        <h3>Why Customers Call Us</h3>
-        <ul>
-          <li>Friendly, straightforward service</li>
-          <li>Dependable residential electrical work</li>
-          <li>Clear communication and honest recommendations</li>
-          <li>Work done carefully and professionally</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="services" class="section section-alt">
-    <div class="container">
-      <h2>Our Electrical Services</h2>
-      <p class="section-copy">
-        We provide a wide range of residential electrical services for homeowners in Seattle and nearby communities.
-      </p>
-
-      <div class="services-grid">
-        <div class="service-box">
-          <h3>Electrical Repairs</h3>
-          <p>
-            Troubleshooting and repairs for outlets, switches, lighting, breakers, and other common electrical problems.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <h3>Panel Upgrades</h3>
-          <p>
-            Upgrading old or overloaded panels to improve safety and support today’s electrical needs.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <h3>Home Rewiring</h3>
-          <p>
-            Rewiring and electrical updates for older homes, remodels, additions, and renovations.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <h3>Lighting Installation</h3>
-          <p>
-            Indoor and outdoor lighting, fixtures, and electrical improvements to make your home safer and more comfortable.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <h3>EV Charger Installation</h3>
-          <p>
-            Safe, convenient home charging station installation with proper circuit and panel evaluation.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <h3>Generator Services</h3>
-          <p>
-            Backup power solutions including generator installation, maintenance, and repair.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="work" class="section">
-    <div class="container">
-      <h2>Our Work</h2>
-      <p class="section-copy">
-        Here are a few examples of projects we’ve completed for local homeowners.
-      </p>
-
-      <div class="gallery-grid">
-        <img src="work-1.jpg" alt="Electrical project by Erickson Electric" />
-        <img src="work-2.jpg" alt="Electrical project by Erickson Electric" />
-        <img src="work-3.jpg" alt="Electrical project by Erickson Electric" />
-        <img src="work-4.jpg" alt="Electrical project by Erickson Electric" />
-        <img src="work-5.jpg" alt="Electrical project by Erickson Electric" />
-        <img src="work-6.jpg" alt="Electrical project by Erickson Electric" />
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" class="section section-alt">
-    <div class="container">
-      <h2>Frequently Asked Questions</h2>
-
-      <div class="faq-list">
-        <details>
-          <summary>Do you serve Seattle and surrounding areas?</summary>
-          <p>Yes, we serve Seattle and many nearby communities. Contact us if you’d like to check your area.</p>
-        </details>
-
-        <details>
-          <summary>Do you provide panel upgrades?</summary>
-          <p>Yes, we install and replace electrical panels for homes that need improved safety or more capacity.</p>
-        </details>
-
-        <details>
-          <summary>Can you install a home EV charger?</summary>
-          <p>Yes, we install EV charging stations and can check whether your current electrical system is ready for one.</p>
-        </details>
-
-        <details>
-          <summary>Do you handle remodel wiring?</summary>
-          <p>Yes, we provide wiring and electrical work for remodels, home updates, and additions.</p>
-        </details>
-
-        <details>
-          <summary>How do I know if I need rewiring?</summary>
-          <p>Common signs include flickering lights, breaker trips, warm outlets, old wiring, or unreliable power.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section id="areas" class="section">
-    <div class="container">
-      <h2>Service Areas</h2>
-      <p class="section-copy">
-        Erickson Electric proudly serves homeowners in Seattle and surrounding communities, including:
-      </p>
-
-      <div class="areas-list">
-        <span>Seattle</span>
-        <span>Ballard</span>
-        <span>Capitol Hill</span>
-        <span>Downtown Seattle</span>
-        <span>Fremont</span>
-        <span>Green Lake</span>
-        <span>Queen Anne</span>
-        <span>University District</span>
-        <span>Wallingford</span>
-        <span>West Seattle</span>
-        <span>Bellevue</span>
-        <span>Redmond</span>
-        <span>Renton</span>
-        <span>Sammamish</span>
-        <span>Everett</span>
-        <span>Tacoma</span>
-        <span>King County</span>
-        <span>Snohomish County</span>
-        <span>Pierce County</span>
-        <span>Skagit County</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section contact-section">
-    <div class="container two-col">
-      <div>
-        <h2>Contact Us</h2>
-        <p>
-          If you need residential electrical service, we’d be glad to help. Call us directly or send us a message below.
-        </p>
-        <p><strong>Phone:</strong> <a href="tel:+12065550199">(206) 555-0199</a></p>
-        <p><strong>Hours:</strong> Monday – Friday, 7:00 am – 5:00 pm</p>
-      </div>
-
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label for="name">Name *</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" />
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message *</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Send Message</button>
-        <p class="form-success" id="formSuccess">Message sent! We’ll be in touch soon.</p>
-      </form>
-    </div>
-  </section>
-
-  <div class="map-wrap">
-    <iframe
-      title="Erickson Electric service area map"
-      src="https://www.google.com/maps?q=Seattle%2C%20WA&t=&z=10&ie=UTF8&iwloc=&output=embed"
-      width="100%"
-      height="380"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
   </div>
+  <div class="hero-badges">
+    <div class="badge">
+      <span class="badge-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+      </span>
+      Locally Owned
+    </div>
+    <div class="badge">
+      <span class="badge-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5.25 3.4 10.17 8 11 4.6-.83 8-5.75 8-11V5zm-1 13-4-4 1.4-1.4 2.6 2.6 5.6-5.6L18 8z"/></svg>
+      </span>
+      Licensed &amp; Insured
+    </div>
+    <div class="badge">
+      <span class="badge-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4ZM8 13a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm8 0c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4ZM8 15c-2.33 0-7 1.17-7 3.5V21h5v-2c0-1.19.61-2.25 1.71-3.08A6.82 6.82 0 0 0 8 15Z"/></svg>
+      </span>
+      Family Expertise
+    </div>
+    <div class="badge">
+      <span class="badge-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 11h6l-1 9 9-11h-6z"/></svg>
+      </span>
+      Full-Service
+    </div>
+  </div>
+</section>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <img src="logo.png" alt="Erickson Electric" class="footer-logo" />
-        <p>Family-owned electrical contractor serving Seattle and surrounding areas.</p>
-        <p><a href="tel:+12065550199">(206) 555-0199</a></p>
+<section id="services" class="section services-section">
+<div class="container">
+  <div class="services-head">
+    <div class="services-intro">
+      <p class="section-label">What We Do Best</p>
+      <h2 class="section-title">Our Services</h2>
+      <p>
+        Erickson Electric provides dependable, high-quality electrical services for homeowners, builders, and property owners throughout Seattle and surrounding areas. Whether you need a repair, an upgrade, or a full installation, we focus on safe work, clean execution, and solutions built for long-term reliability.
+      </p>
+    </div>
+    <aside class="services-note">
+      <h3>Why Homeowners Call Us</h3>
+      <p>
+        We combine practical experience, modern electrical knowledge, and family-owned service to make projects easier from start to finish.
+      </p>
+      <ul>
+        <li>Clear communication and honest recommendations</li>
+        <li>Neat, professional workmanship</li>
+        <li>Code-conscious installations and upgrades</li>
+        <li>Solutions built for modern homes and power demands</li>
+      </ul>
+    </aside>
+  </div>
+  <div class="services-grid">
+    <article class="service-card service-card--featured">
+      <div class="service-card-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 11h6l-1 9 9-11h-6z"/></svg>
       </div>
-
-      <div>
-        <h4>Quick Links</h4>
-        <a href="#">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+      <h3>Residential Electrical</h3>
+      <p>
+        From troubleshooting and repairs to remodel wiring and upgrades, we handle the day-to-day electrical work that keeps your home safe, functional, and ready for modern living.
+      </p>
+      <div class="service-meta">
+        <span>Repairs</span>
+        <span>Remodels</span>
+        <span>Installations</span>
       </div>
+      <div class="service-bestfor">
+        <div class="service-bestfor-title">Best For</div>
+        <div class="service-bestfor-text">
+          Homeowners needing dependable electrical repairs, improvements, and upgrades done with care.
+        </div>
+      </div>
+      <div class="service-includes-title">What We Handle</div>
+      <ul class="service-list">
+        <li>Electrical Panel Upgrades</li>
+        <li>Electrical Service Upgrades</li>
+        <li>Home Safety Inspections</li>
+        <li>Electrical Remodeling</li>
+        <li>Electrical Rewiring</li>
+        <li>Smart Switch &amp; Outlet Install</li>
+        <li>Lighting &amp; Fixture Installation</li>
+        <li>Dedicated Circuit Installation</li>
+      </ul>
+    </article>
+    <article class="service-card">
+      <div class="service-card-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h1a4 4 0 0 1 4 4v5a2 2 0 0 1-2 2h-1v2h-2v-2H7v2H5v-2H4a2 2 0 0 1-2-2v-5a4 4 0 0 1 4-4h1l1.5-4h7ZM9.93 5 8.8 8h6.4L14.07 5ZM6 10a2 2 0 0 0-2 2v4h16v-4a2 2 0 0 0-2-2Zm1.5 4A1.5 1.5 0 1 1 9 12.5 1.5 1.5 0 0 1 7.5 14Zm9 0a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5Z"/></svg>
+      </div>
+      <h3>EV Charging Stations</h3>
+      <p>
+        We install safe, efficient home EV charging solutions with the right circuit capacity, charger placement, and setup for convenient everyday use.
+      </p>
+      <div class="service-meta">
+        <span>Home Charging</span>
+        <span>Level 1 &amp; 2</span>
+      </div>
+      <div class="service-bestfor">
+        <div class="service-bestfor-title">Best For</div>
+        <div class="service-bestfor-text">Homeowners who want faster, more reliable EV charging at home.</div>
+      </div>
+      <div class="service-includes-title">What We Handle</div>
+      <ul class="service-list">
+        <li>EV Station Installation</li>
+        <li>EV Charger Repair</li>
+        <li>Level 2 Charger Install</li>
+        <li>Dedicated Circuit Setup</li>
+        <li>Load Evaluation</li>
+      </ul>
+    </article>
+    <article class="service-card">
+      <div class="service-card-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10v5h2a2 2 0 0 1 2 2v3a5 5 0 0 1-5 5h-1v5H9v-5H8a5 5 0 0 1-5-5V9a2 2 0 0 1 2-2h2Zm2 2v5h6V4Zm-4 7v1a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-1Z"/></svg>
+      </div>
+      <h3>Generator Services</h3>
+      <p>
+        Protect your home during outages with standby and whole-home generator solutions designed around your essential systems and backup power needs.
+      </p>
+      <div class="service-meta">
+        <span>Backup Power</span>
+        <span>Standby Systems</span>
+      </div>
+      <div class="service-bestfor">
+        <div class="service-bestfor-title">Best For</div>
+        <div class="service-bestfor-text">Families who want dependable backup power and peace of mind during outages.</div>
+      </div>
+      <div class="service-includes-title">What We Handle</div>
+      <ul class="service-list">
+        <li>Whole Home Generator Install</li>
+        <li>Standby Generator Install</li>
+        <li>Generator Maintenance</li>
+        <li>Generator Repair</li>
+        <li>Transfer Switch Solutions</li>
+      </ul>
+    </article>
+    <article class="service-card">
+      <div class="service-card-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 3v12h2V6Zm4 2v10h2V8Zm4-3v13h2V5Z"/></svg>
+      </div>
+      <h3>Panel Upgrades</h3>
+      <p>
+        Upgrade outdated or overloaded panels to improve safety, increase capacity, and support remodels, EV chargers, HVAC systems, and other modern electrical needs.
+      </p>
+      <div class="service-meta">
+        <span>Safety</span>
+        <span>Capacity</span>
+        <span>Modernization</span>
+      </div>
+      <div class="service-bestfor">
+        <div class="service-bestfor-title">Best For</div>
+        <div class="service-bestfor-text">Homes with tripping breakers, aging equipment, or growing power demands.</div>
+      </div>
+      <div class="service-includes-title">What We Handle</div>
+      <ul class="service-list">
+        <li>Panel Inspection</li>
+        <li>Panel Replacement</li>
+        <li>Breaker Upgrades</li>
+        <li>Capacity Review</li>
+        <li>Safety Improvements</li>
+      </ul>
+    </article>
+  </div>
+  <div class="services-benefits">
+    <div class="services-benefit">
+      <strong>Clear Recommendations</strong>
+      <span>We explain the issue, your options, and the best next step without unnecessary upselling.</span>
+    </div>
+    <div class="services-benefit">
+      <strong>Built for Modern Homes</strong>
+      <span>Our work supports today's appliances, tech, EV charging, and growing power demands.</span>
+    </div>
+    <div class="services-benefit">
+      <strong>Safety-Focused Work</strong>
+      <span>We approach every project with long-term reliability, careful workmanship, and attention to detail.</span>
+    </div>
+    <div class="services-benefit">
+      <strong>Family-Owned Service</strong>
+      <span>Direct communication, dependable scheduling, and a reputation built on trust.</span>
+    </div>
+  </div>
+</div>
+</section>
 
-      <div>
-        <h4>Services</h4>
-        <a href="#services">Electrical Repairs</a>
-        <a href="#services">Panel Upgrades</a>
-        <a href="#services">EV Charger Installation</a>
-        <a href="#services">Generator Services</a>
+<section id="about" class="section about-section">
+<div class="container">
+  <div class="about-top">
+    <div class="about-copy">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">Family-Taught.<br />Community-Focused.</h2>
+      <p>
+        Erickson Electric was started in 2020 by two brothers and their father — a master electrician who taught them the trade. That background shaped the way we work: do it right, do it safely, and treat every home with respect.
+      </p>
+      <p>
+        We combine hands-on experience with a straightforward approach to customer service. Whether we're upgrading a panel, wiring a remodel, or installing an EV charger, our goal is the same: quality work you can trust.
+      </p>
+    </div>
+    <div class="about-highlight-card">
+      <div class="about-highlight-inner">
+        <div class="about-highlight-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5.25 3.4 10.17 8 11 4.6-.83 8-5.75 8-11V5zm-1 13-4-4 1.4-1.4 2.6 2.6 5.6-5.6L18 8z"/></svg>
+        </div>
+        <h3>Work Built on Trust</h3>
+        <p>
+          We believe good electrical work should feel organized, professional, and dependable from the first call to the final walkthrough.
+        </p>
+        <ul>
+          <li>Family-owned and community-focused</li>
+          <li>Residential service with a quality-first mindset</li>
+          <li>Professional communication from start to finish</li>
+        </ul>
       </div>
     </div>
+  </div>
+  <div class="about-stats-wrap">
+    <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Years Serving Seattle</span></div>
+    <div class="stat"><span class="stat-num">3</span><span class="stat-label">Family Members</span></div>
+    <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Licensed &amp; Insured</span></div>
+    <div class="stat"><span class="stat-num">1</span><span class="stat-label">Goal: Do It Right</span></div>
+  </div>
+</div>
+</section>
 
-    <div class="footer-bottom">
-      <p>&copy; 2025 Erickson Electric LLC. All rights reserved.</p>
+<section id="work" class="section work-section">
+<div class="container">
+  <p class="section-label">See Our Results</p>
+  <h2 class="section-title">Our Work</h2>
+  <p class="work-intro"></p>
+  <div class="gallery-grid">
+    <div class="gallery-item gallery-item--tall">
+      <img src="work-1.jpg" alt="Erickson Electric project photo 1" loading="lazy" />
     </div>
-  </footer>
+    <div class="gallery-item">
+      <img src="work-2.jpg" alt="Erickson Electric project photo 2" loading="lazy" />
+    </div>
+    <div class="gallery-item">
+      <img src="work-3.jpg" alt="Erickson Electric project photo 3" loading="lazy" />
+    </div>
+    <div class="gallery-item gallery-item--wide">
+      <img src="work-4.jpg" alt="Erickson Electric project photo 4" loading="lazy" />
+    </div>
+    <div class="gallery-item">
+      <img src="work-5.jpg" alt="Erickson Electric project photo 5" loading="lazy" />
+    </div>
+    <div class="gallery-item">
+      <img src="work-6.jpg" alt="Erickson Electric project photo 6" loading="lazy" />
+    </div>
+  </div>
+</div>
+</section>
 
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const href = a.getAttribute('href');
-        if (href === '#') return;
-        const target = document.querySelector(href);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-          document.body.classList.remove('nav-open');
-        }
-      });
-    });
+<section id="faq" class="section faq-section">
+<div class="container">
+  <p class="section-label">Common Questions</p>
+  <h2 class="section-title">FAQ</h2>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>Do you handle electrical panel upgrades in Seattle?</summary>
+      <p>Yes, we upgrade electrical panels throughout Seattle and the surrounding areas. Contact us to schedule an inspection and quote.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How quickly can you install an EV charging station?</summary>
+      <p>Timelines depend on the location, panel capacity, and charger type. Reach out and we'll provide availability and a project estimate.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What's included in a home electrical safety inspection?</summary>
+      <p>We inspect key components such as wiring, outlets, panels, grounding, and visible safety concerns to help identify issues before they become bigger problems.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can you wire homes for remodels or new construction?</summary>
+      <p>Yes. We provide electrical work for remodels, upgrades, and new construction projects, and can coordinate with builders or contractors as needed.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do I need a panel upgrade before installing an EV charger?</summary>
+      <p>Not always. We can evaluate your current electrical system and determine whether your panel has enough available capacity for the charger you want.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How do I know if my home may need rewiring?</summary>
+      <p>Frequent breaker trips, flickering lights, outdated wiring, warm outlets, or inconsistent power can all be signs that your home may need electrical updates.</p>
+    </details>
+  </div>
+</div>
+</section>
 
-    function handleSubmit(e) {
+<section id="areas" class="section areas-section">
+<div class="container">
+  <p class="section-label">Where We Work</p>
+  <h2 class="section-title">Proudly Serving</h2>
+  <div class="areas-grid">
+    <span>Seattle, WA</span><span>Ballard, WA</span><span>Capitol Hill, WA</span>
+    <span>Downtown Seattle, WA</span><span>Fremont, WA</span><span>Green Lake, WA</span>
+    <span>Queen Anne, WA</span><span>University District, WA</span><span>Wallingford, WA</span>
+    <span>West Seattle, WA</span><span>Bellevue, WA</span><span>Redmond, WA</span>
+    <span>Renton, WA</span><span>Sammamish, WA</span><span>Everett, WA</span>
+    <span>Tacoma, WA</span><span>King County, WA</span><span>Snohomish County, WA</span>
+    <span>Pierce County, WA</span><span>Skagit County, WA</span>
+  </div>
+</div>
+</section>
+
+<section id="contact" class="section contact-section">
+<div class="container contact-inner">
+  <div class="contact-text">
+    <p class="section-label">Let's Talk</p>
+    <h2 class="section-title">Get a Free Quote Today</h2>
+    <p>Ready to get started? Fill out the form and we'll get back to you fast. Or give us a call directly.</p>
+    <a href="tel:+12065550199" class="contact-phone">(206) 555-0199</a>
+    <div class="contact-hours">
+      <strong>Operating Hours</strong>
+      <p>Mon – Fri: 7:00 am – 5:00 pm</p>
+      <p>Sat – Sun: Closed</p>
+    </div>
+  </div>
+  <form class="contact-form" onsubmit="handleSubmit(event)">
+    <div class="form-group">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required placeholder="Jane Smith" />
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="(206) 000-0000" />
+    </div>
+    <div class="form-group">
+      <label for="message">Tell us about your project *</label>
+      <textarea id="message" name="message" required rows="4" placeholder="Panel upgrade, EV charger install, generator, etc."></textarea>
+    </div>
+    <button type="submit" class="btn btn-blue btn-full">Send Message</button>
+    <p class="form-disclaimer">By submitting, you agree to receive communications from Erickson Electric. We respect your privacy.</p>
+    <p class="form-success" id="formSuccess">Message sent! We'll be in touch shortly.</p>
+  </form>
+</div>
+</section>
+
+<div class="map-wrap">
+  <iframe
+    title="Erickson Electric Location"
+    src="https://www.google.com/maps?q=Seattle%2C%20WA&t=&z=10&ie=UTF8&iwloc=&output=embed"
+    width="100%"
+    height="420"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Erickson Electric" class="footer-logo" />
+      <p class="footer-tagline">Family-owned electrical services<br />serving Seattle since 2020.</p>
+      <a href="tel:+12065550199" class="footer-phone">(206) 555-0199</a>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#">Home</a>
+      <a href="#services">Services</a>
+      <a href="#work">Projects</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Residential Electrical</a>
+      <a href="#services">EV Charging Stations</a>
+      <a href="#services">Generator Services</a>
+      <a href="#services">Panel Upgrades</a>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <p>Mon – Fri: 7am – 5pm</p>
+      <p>Sat – Sun: Closed</p>
+      <div class="footer-links-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Erickson Electric LLC. All rights reserved. | Seattle, WA</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
       e.preventDefault();
-      document.getElementById('formSuccess').style.display = 'block';
-      e.target.reset();
+      target.scrollIntoView({ behavior: 'smooth' });
+      document.body.classList.remove('nav-open');
     }
-  </script>
+  });
+});
+
+window.addEventListener('scroll', () => {
+  document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('toggle', () => {
+    if (item.open) {
+      document.querySelectorAll('.faq-item[open]').forEach(o => {
+        if (o !== item) o.removeAttribute('open');
+      });
+    }
+  });
+});
+
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('formSuccess').style.display = 'block';
+  e.target.reset();
+}
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.service-card, .faq-item, .gallery-item, .stat, .areas-grid span, .services-benefit, .about-highlight-card').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
