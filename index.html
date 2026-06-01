@@ -8,7 +8,6 @@
     content="Erickson Electric provides friendly, reliable residential electrical services in Seattle, including panel upgrades, EV chargers, generators, rewiring, repairs, remodel wiring, lighting, and safety inspections. Family-owned, licensed, and insured."
   />
   <title>Erickson Electric | Residential Electrician in Seattle, WA</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -23,7 +22,6 @@
       <a href="#" class="logo">
         <img src="logo.png" alt="Erickson Electric Logo" />
       </a>
-
       <button
         class="nav-toggle"
         aria-label="Toggle menu"
@@ -31,7 +29,6 @@
       >
         <span></span><span></span><span></span>
       </button>
-
       <nav class="main-nav">
         <a href="#services">Services</a>
         <a href="#about">About</a>
@@ -40,7 +37,6 @@
         <a href="#areas">Service Areas</a>
         <a href="#contact" class="nav-cta">Free Quote</a>
       </nav>
-
       <a href="tel:+4253207337" class="header-phone">(425) 320-7337</a>
     </div>
   </header>
@@ -51,7 +47,6 @@
     <div class="hero-pattern" aria-hidden="true"></div>
     <div class="hero-wave hero-wave-1" aria-hidden="true"></div>
     <div class="hero-wave hero-wave-2" aria-hidden="true"></div>
-
     <div class="hero-content">
       <div class="hero-logo">
         <img src="logo.png" alt="Erickson Electric" />
@@ -69,7 +64,6 @@
         <a href="tel:+4253207337" class="btn btn-secondary">Call (425) 320-7337</a>
       </div>
     </div>
-
     <div class="hero-badges">
       <div class="badge">
         <span class="badge-icon">
@@ -111,7 +105,6 @@
             clear communication, and dependable results.
           </p>
         </div>
-
         <aside class="services-note">
           <h3>Why Homeowners Call Erickson Electric</h3>
           <p>
@@ -126,7 +119,6 @@
           </ul>
         </aside>
       </div>
-
       <div class="services-grid">
         <article class="service-card service-card--featured">
           <div class="service-card-icon">
@@ -161,7 +153,6 @@
             <li>Troubleshooting &amp; Repairs</li>
           </ul>
         </article>
-
         <article class="service-card">
           <div class="service-card-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h1a4 4 0 0 1 4 4v5a2 2 0 0 1-2 2h-1v2h-2v-2H7v2H5v-2H4a2 2 0 0 1-2-2v-5a4 4 0 0 1 4-4h1l1.5-4h7ZM9.93 5 8.8 8h6.4L14.07 5ZM6 10a2 2 0 0 0-2 2v4h16v-4a2 2 0 0 0-2-2Zm1.5 4A1.5 1.5 0 1 1 9 12.5 1.5 1.5 0 0 1 7.5 14Zm9 0a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5Z"/></svg>
@@ -190,7 +181,6 @@
             <li>Load Evaluation</li>
           </ul>
         </article>
-
         <article class="service-card">
           <div class="service-card-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10v5h2a2 2 0 0 1 2 2v3a5 5 0 0 1-5 5h-1v5H9v-5H8a5 5 0 0 1-5-5V9a2 2 0 0 1 2-2h2Zm2 2v5h6V4Zm-4 7v1a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-1Z"/></svg>
@@ -219,7 +209,6 @@
             <li>Transfer Switch Solutions</li>
           </ul>
         </article>
-
         <article class="service-card">
           <div class="service-card-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 3v12h2V6Zm4 2v10h2V8Zm4-3v13h2V5Z"/></svg>
@@ -250,7 +239,6 @@
           </ul>
         </article>
       </div>
-
       <div class="services-benefits">
         <div class="services-benefit">
           <strong>Easy to Work With</strong>
@@ -289,7 +277,6 @@
             the process feel simple, dependable, and professional from start to finish.
           </p>
         </div>
-
         <div class="about-highlight-card">
           <div class="about-highlight-inner">
             <div class="about-highlight-icon">
@@ -308,7 +295,6 @@
           </div>
         </div>
       </div>
-
       <div class="about-stats-wrap">
         <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Years Serving Seattle</span></div>
         <div class="stat"><span class="stat-num">3</span><span class="stat-label">Family Members</span></div>
@@ -416,7 +402,15 @@
         </div>
       </div>
 
-      <form class="contact-form" onsubmit="handleSubmit(event)">
+      <form
+        class="contact-form"
+        id="contactForm"
+        action="https://formsubmit.co/ajax/houstondrawson8@gmail.com"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="New Free Quote Request - Erickson Electric" />
+        <input type="hidden" name="_captcha" value="false" />
+
         <div class="form-group">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required placeholder="Jane Smith" />
@@ -467,7 +461,6 @@
         </p>
         <a href="tel:+4253207337" class="footer-phone">(425) 320-7337</a>
       </div>
-
       <div class="footer-col">
         <h4>Quick Links</h4>
         <a href="#">Home</a>
@@ -477,7 +470,6 @@
         <a href="#about">About Us</a>
         <a href="#contact">Contact</a>
       </div>
-
       <div class="footer-col">
         <h4>Services</h4>
         <a href="#services">Residential Electrical</a>
@@ -485,7 +477,6 @@
         <a href="#services">Generator Services</a>
         <a href="#services">Panel Upgrades</a>
       </div>
-
       <div class="footer-col">
         <h4>Hours</h4>
         <p>Mon – Fri: 7am – 5pm</p>
@@ -496,7 +487,6 @@
         </div>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p>&copy; 2025 Erickson Electric LLC. All rights reserved. | Seattle, WA</p>
     </div>
@@ -528,11 +518,39 @@
       });
     });
 
-    function handleSubmit(e) {
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
-      document.getElementById('formSuccess').style.display = 'block';
-      e.target.reset();
-    }
+
+      formSuccess.style.display = 'none';
+
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            Accept: 'application/json'
+          }
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          formSuccess.style.display = 'block';
+          contactForm.reset();
+        } else {
+          alert('There was a problem sending your message. Please try again.');
+          console.error(result);
+        }
+      } catch (error) {
+        alert('There was a problem sending your message. Please try again.');
+        console.error(error);
+      }
+    });
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
