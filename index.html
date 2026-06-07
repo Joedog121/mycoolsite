@@ -119,6 +119,7 @@
           </ul>
         </aside>
       </div>
+
       <div class="services-grid">
         <article class="service-card service-card--featured">
           <div class="service-card-icon">
@@ -153,6 +154,7 @@
             <li>Troubleshooting &amp; Repairs</li>
           </ul>
         </article>
+
         <article class="service-card">
           <div class="service-card-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7h1a4 4 0 0 1 4 4v5a2 2 0 0 1-2 2h-1v2h-2v-2H7v2H5v-2H4a2 2 0 0 1-2-2v-5a4 4 0 0 1 4-4h1l1.5-4h7ZM9.93 5 8.8 8h6.4L14.07 5ZM6 10a2 2 0 0 0-2 2v4h16v-4a2 2 0 0 0-2-2Zm1.5 4A1.5 1.5 0 1 1 9 12.5 1.5 1.5 0 0 1 7.5 14Zm9 0a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5Z"/></svg>
@@ -181,6 +183,7 @@
             <li>Load Evaluation</li>
           </ul>
         </article>
+
         <article class="service-card">
           <div class="service-card-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10v5h2a2 2 0 0 1 2 2v3a5 5 0 0 1-5 5h-1v5H9v-5H8a5 5 0 0 1-5-5V9a2 2 0 0 1 2-2h2Zm2 2v5h6V4Zm-4 7v1a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-1Z"/></svg>
@@ -209,6 +212,7 @@
             <li>Transfer Switch Solutions</li>
           </ul>
         </article>
+
         <article class="service-card">
           <div class="service-card-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 3v12h2V6Zm4 2v10h2V8Zm4-3v13h2V5Z"/></svg>
@@ -239,6 +243,7 @@
           </ul>
         </article>
       </div>
+
       <div class="services-benefits">
         <div class="services-benefit">
           <strong>Easy to Work With</strong>
@@ -267,8 +272,8 @@
           <p class="section-label">About Us</p>
           <h2 class="section-title">A Local Family Business Built on Honest Work</h2>
           <p>
-            Founded in 2020 by two brothers and their dad, a seasoned electrician who passed down his expertise, 
-            Erickson Electric brings family tradition and modern service together. Proudly serving the Seattle community, 
+            Founded in 2020 by two brothers and their dad, a seasoned electrician who passed down his expertise,
+            Erickson Electric brings family tradition and modern service together. Proudly serving the Seattle community,
             we provide everything from electrical inspections to smart home improvements with dependable workmanship and attention to detail.
           </p>
           <p>
@@ -415,10 +420,17 @@
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required placeholder="Jane Smith" />
         </div>
+
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="(206) 000-0000" />
+          <input type="tel" id="phone" name="phone" required placeholder="(206) 000-0000" />
         </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" />
+        </div>
+
         <div class="form-group">
           <label for="message">Tell Us About Your Project</label>
           <textarea
@@ -429,7 +441,9 @@
             placeholder="Repair, panel upgrade, EV charger, generator, remodel wiring, lighting, etc."
           ></textarea>
         </div>
+
         <button type="submit" class="btn btn-blue btn-full">Send Message</button>
+
         <p class="form-disclaimer">
           By submitting, you agree to receive communications from Erickson Electric. We respect your privacy.
         </p>
@@ -523,9 +537,7 @@
 
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
-
       formSuccess.style.display = 'none';
-
       const formData = new FormData(contactForm);
 
       try {
@@ -567,3 +579,4 @@
   </script>
 </body>
 </html>
+   
